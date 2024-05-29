@@ -32,7 +32,7 @@ export const FileUploads = () => {
 
     try {
       const res = await axios.post(
-        `${import.meta.env.VITE_REACT_FILE_UPLOAD_UR}/upload`,
+        `${import.meta.env.VITE_REACT_FILE_UPLOAD_URL}/upload`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
