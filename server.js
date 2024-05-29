@@ -73,7 +73,7 @@ if (process.env.NODE_ENV === "development") {
 }
 
 // Upload Endpoint
-app.post("/upload", (req, res, next) => {
+app.post(`${process.env.SERVER_URL}/upload`, (req, res, next) => {
   try {
     if (!req.files || Object.keys(req.files).length === 0) {
       return res.status(400).json({ msg: "No file uploaded" });
@@ -106,7 +106,7 @@ app.post("/upload", (req, res, next) => {
 });
 
 // Route to get all uploaded files
-app.get("/files", (req, res, next) => {
+app.get(`${process.env.SERVER_URL}/files`, (req, res, next) => {
   try {
     const directoryPath = path.join(__dirname, "client/public/files/uploads");
 
