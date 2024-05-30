@@ -81,10 +81,10 @@ export const FileUploads = () => {
         <Row className="mt-5">
           <Col md={3}></Col>
           <Col md={6}>
-            <h3 className="text-center">{uploadedFile.fileName}</h3>
+            <h3 className="text-center">{uploadedFile?.fileName}</h3>
             <img
-              src={uploadedFile.filePath}
-              alt={uploadedFile.fileName}
+              src={uploadedFile?.filePath}
+              alt={uploadedFile?.fileName}
               style={{ maxWidth: "100%" }}
             />
           </Col>
